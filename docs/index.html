@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Service Planner</title>
+<meta name="description" content="Offline-first Android day planner + Windows companion for home-visit service work: flexible appointment windows, linked rescheduling history, printable schedules, local SQLite. Rust + Tauri v2, AGPL-3.0. No accounts, no tracking.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23536444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21C5 22 2 17 5 13C2 8 7 4 12 6C14 1 22 1 25 6C32 4 37 10 33 15C35 20 30 23 26 21'/%3E%3Cpath d='M17 12V30Q17 35 12 37M8 37H34'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+:root{
+  --paper:#f6f5f0;--card:#fffefa;--ink:#29352e;--muted:#73786d;--olive:#536444;
+  --olive-dark:#364c32;--line:#e4e5db;--sage:#e9eee2;--sand:#f0e8dc;--radius:18px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100svh;display:flex;align-items:center;justify-content:center;
+  padding:28px 16px;background:var(--paper);color:var(--ink);
+  font-family:"Segoe UI",Arial,sans-serif;font-synthesis:none;
+}
+main{
+  width:min(560px,100%);background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:44px 36px 36px;text-align:center;
+  box-shadow:0 1px 2px rgba(41,53,46,.04),0 12px 40px rgba(41,53,46,.06);
+}
+.brand{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--olive)}
+.brand svg{width:46px;height:46px;flex-shrink:0}
+.brand-copy{text-align:left}
+.brand-copy strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:19px;letter-spacing:.2px}
+.brand-copy em{display:block;font-style:italic;color:var(--muted);font-size:13px;margin-top:2px}
+.badge{
+  display:inline-block;margin:30px 0 14px;padding:6px 14px;border-radius:999px;
+  background:var(--sage);color:var(--olive-dark);font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(28px,6vw,38px);line-height:1.2;margin:0 0 14px}
+p{color:var(--muted);font-size:15px;line-height:1.65;margin:0 auto 10px;max-width:42ch}
+.actions{margin-top:26px}
+.github-link{
+  display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:12px;
+  background:var(--olive);color:var(--card);text-decoration:none;font-weight:600;font-size:14px;
+}
+.github-link:hover{background:var(--olive-dark)}
+.github-link:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+.github-link svg{width:18px;height:18px;fill:currentColor}
+footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+@media(max-width:420px){main{padding:34px 20px 28px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <svg role="img" aria-label="A reader resting against the tree of life with an open book" viewBox="0 0 40 40">
+      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21C5 22 2 17 5 13C2 8 7 4 12 6C14 1 22 1 25 6C32 4 37 10 33 15C35 20 30 23 26 21"/>
+        <path d="M17 12V30Q17 35 12 37M17 19L10 14M17 16L24 11M17 25L25 18M17 32L20 37M8 37H34"/>
+        <circle cx="22" cy="24" r="2.2"/>
+        <path d="M20 28L19 32Q19 34 22 34H26L30 37M22 29L25 31H27"/>
+        <path d="M25 27L29 28.5L33 26.5V31L29 33L25 31ZM29 28.5V33"/>
+      </g>
+    </svg>
+    <span class="brand-copy"><strong>Smart Service Planner</strong><em>One visit at a time.</em></span>
+  </div>
+
+  <div class="badge">Coming Soon</div>
+  <h1>Your day, thoughtfully laid out.</h1>
+  <p>An offline-first day planner for home-visit work — an Android app with a Windows
+  companion. Built with Rust and Tauri. Your data stays on your devices.</p>
+
+  <div class="actions">
+    <a class="github-link" href="https://github.com/LevyBytes/Smart_Service_Planner">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      View on GitHub
+    </a>
+  </div>
+
+  <footer>AGPL-3.0 &middot; No accounts, no tracking &middot; Free to use, inspect, and improve</footer>
+</main>
+</body>
+</html>
